@@ -95,10 +95,11 @@ const Login = () => {
           <div className="card-elevated">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label className="block text-sm font-semibold text-secondary-700 mb-3">
+                <label htmlFor="email" className="block text-sm font-semibold text-secondary-700 mb-3">
                   Correo Electrónico
                 </label>
                 <input
+                  id="email"
                   type="email"
                   className={`input-field ${errors.email ? 'border-error-500 focus:ring-error-500' : ''}`}
                   placeholder="admin@reservas.com"
@@ -118,11 +119,12 @@ const Login = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-secondary-700 mb-3">
+                <label htmlFor="password" className="block text-sm font-semibold text-secondary-700 mb-3">
                   Contraseña
                 </label>
                 <div className="relative">
                   <input
+                    id="password"
                     type={showPassword ? 'text' : 'password'}
                     className={`input-field pr-12 ${errors.password ? 'border-error-500 focus:ring-error-500' : ''}`}
                     placeholder="Tu contraseña"
